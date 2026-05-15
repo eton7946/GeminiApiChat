@@ -11,7 +11,9 @@ public sealed class AppConfig
         "gemini-2.5-flash",
         "gemini-2.5-pro",
         "gemini-2.5-flash-lite",
-        "gemini-2.0-flash"
+        "gemini-2.0-flash",
+        "gemma-4-31b-it",
+        "gemma-4-26b-a4b-it"
     ];
 
     public static string ConfigPath => Path.Combine(AppContext.BaseDirectory, "appsettings.json");

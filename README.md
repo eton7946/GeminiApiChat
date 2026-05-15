@@ -9,6 +9,8 @@
   - `gemini-2.5-pro`
   - `gemini-2.5-flash-lite`
   - `gemini-2.0-flash`
+  - `gemma-4-31b-it`
+  - `gemma-4-26b-a4b-it`
 - 可按「更新模型」直接向 Gemini API 抓取帳號當下可用模型清單。
 - 保留多輪對話上下文。
 - Enter 送出訊息（Shift+Enter 換行）。

@@ -63,7 +63,9 @@ public sealed class GeminiClient(HttpClient httpClient)
 
         return list.Models?
             .Select(m => m.Name.Replace("models/", string.Empty, StringComparison.OrdinalIgnoreCase))
-            .Where(m => !string.IsNullOrWhiteSpace(m) && m.Contains("gemini", StringComparison.OrdinalIgnoreCase))
+            .Where(m => !string.IsNullOrWhiteSpace(m) &&
+                        (m.Contains("gemini", StringComparison.OrdinalIgnoreCase) ||
+                         m.Contains("gemma", StringComparison.OrdinalIgnoreCase)))
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .OrderBy(m => m, StringComparer.OrdinalIgnoreCase)
             .ToList() ?? [];
